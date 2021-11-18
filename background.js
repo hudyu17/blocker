@@ -7,12 +7,11 @@ var URLStorage;
 
 // var blockedSites = ["espn.com", "wikipedia.org"];
 
-var items = localStorage.getItem('items');
-var blockedSites = JSON.parse(items);
 
-console.log(blockedSites);
 
 function interceptRequest(request) {
+  var items = localStorage.getItem('items');
+  var blockedSites = JSON.parse(items);
   if(request && request.url) { 
     if (blockedSites != null) {
       if(request.type == "main_frame") // new page/site is loading in main window

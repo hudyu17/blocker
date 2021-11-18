@@ -26,7 +26,7 @@ document.querySelector('.new-item button').addEventListener('click',function(){
         fetchItems();
         document.querySelector('.new-item input').value='';
         document.querySelector('.new-item').style.display='none';
-        chrome.runtime.reload() // this is janky; reloads the extension so background script refreshes but not ideal
+        // chrome.runtime.reload() // this is janky; reloads the extension so background script refreshes but not ideal
     }
 });
 
